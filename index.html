@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- CODEMIRROR CSS -->
+    <link rel="stylesheet" href="./codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="./codemirror/theme/monokai.css">
+    <title>JavaScript Playground</title>
+</head>
+<body>
+
+    <main>
+        <section class="left__section">
+            <h1>JavaScript Playground</h1>
+            <p>JavaScript code editor with code highlighting. Project made for practice purposes, using the CodeMirror API and the html-console-log library.</p>
+
+            <div class="author__info">
+                <span class="author">Adrian Rangel <small>(lainJS)</small> </span>
+
+                <a href='https://github.com/laindomJS'>
+                    <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+
+                <div class="social__icons">
+                    <a href="https://www.instagram.com/lain_js/">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com/laindom_1">
+                        <i class="fa-brands fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="right__section">
+
+            <button onclick="run();">Run</button>
+            <button onclick="editor.setValue('');">Clear</button>
+
+            <textarea id="editor"></textarea>
+
+            <div class="panel" id="console">
+                <ul id="output">
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <small class="version">1.0</small>
+    
+     <!-- CODEMIRROR SCRIPTS -->
+     <script src="./codemirror/lib/codemirror.js"></script>
+     <script src="./codemirror/mode/javascript/javascript.js"></script>
+     <script src="./console-log-html.min.js"></script>
+     <script src="./evaluation.js"></script>
+     <script src="./output.js"></script>
+     <!-- CUSTOM SCRIPT -->
+     <script src="./main.js"></script>
+</body>
+</html>
