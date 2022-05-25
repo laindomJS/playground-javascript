@@ -125,3 +125,11 @@ button:hover {
     background-color: #181212;
     color: #157fea;
 }
+
+#output {
+    list-style: none;
+}
+
+#output > li {
+    font-size: 19px;
+}
