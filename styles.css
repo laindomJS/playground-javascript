@@ -15,7 +15,7 @@ body {
 /* GENERAL STYLES */
 main {
     display: flex;
-    padding: 5rem;
+    padding: 3rem 4rem 2rem 4rem;
 }
 
 h1 {
@@ -28,6 +28,7 @@ h1 {
 
 h1:hover {
     color: #F0DB4F;
+    cursor: default;
 }
 
 p {
@@ -46,6 +47,12 @@ p {
 
 .author {
     font-size: 26px;
+    transition: .2s ease-in;
+}
+
+.author:hover {
+    color: #F0DB4F;
+    cursor: default;
 }
 
 small {
@@ -90,15 +97,14 @@ small {
 .panel {
     background-color: #000;
     color: #fff;
+    padding-top: .6rem;
 }
 
-.version {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: #fff;
-    font-size: 18px;
+.output li {
+    letter-spacing: 1px;
+    font-size: 6px;
 }
+
 
 button {
     width: 90px;
@@ -122,6 +128,8 @@ button:hover {
 }
 
 .panel {
+    width: 620px;
+    height: 240px;
     background-color: #181212;
     color: #157fea;
 }

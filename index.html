@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- FONT AWESOME-->
@@ -17,32 +21,40 @@
 </head>
 <body>
 
+
     <main>
         <section class="left__section">
             <h1>JavaScript Playground</h1>
-            <p>JavaScript code editor with code highlighting. Project made for practice purposes, using the CodeMirror API and the html-console-log library.</p>
+            <p>JavaScript code editor with code highlighting. Project made for practice purposes, using the CodeMirror API and the html-console-log library. This project is not responsive.</p>
 
             <div class="author__info">
-                <span class="author">Adrian Rangel <small>(lainJS)</small> </span>
 
-                <a href='https://github.com/laindomJS'>
-                    <i class="fa-brands fa-github fa-2x"></i>
-                </a>
+                <div class="author__container">
+                    <h2 class="title__author">Author:</h2>
+                    <span class="author">Adrian Rangel <small>(lainJS)</small></span>
+                </div>
+                
 
                 <div class="social__icons">
+
+                    <a href='https://github.com/laindomJS'>
+                        <i class="fa-brands fa-github fa-2x"></i>
+                    </a>
+
                     <a href="https://www.instagram.com/lain_js/">
                         <i class="fa-brands fa-instagram fa-2x"></i>
                     </a>
+
                     <a href="https://twitter.com/laindom_1">
                         <i class="fa-brands fa-twitter fa-2x"></i>
                     </a>
+
                 </div>
             </div>
-            
         </section>
 
-        <section class="right__section">
 
+        <section class="right__section">
             <button onclick="run();">Run</button>
             <button onclick="editor.setValue('');">Clear</button>
 
@@ -55,8 +67,6 @@
             </div>
         </section>
     </main>
-
-    <small class="version">1.0</small>
     
      <!-- CODEMIRROR SCRIPTS -->
      <script src="./codemirror/lib/codemirror.js"></script>
