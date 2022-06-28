@@ -22,43 +22,36 @@
 <body>
 
 
+    <!-- NAV -->
+    <nav class="nav__container">
+        <!-- SWITCH BUTTON -->
+        <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox theme" id="myonoffswitch" tabindex="0" checked>
+            <label class="onoffswitch-label" for="myonoffswitch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+        </div>
+        <!-- SWITCH BUTTON -->
+        
+        <h1 class="title">JavaScript Playground</h1>
+        <a href='https://github.com/laindomJS/playground-javascript'>
+            <i class="fa-brands fa-github fa-3x"></i>
+        </a>
+    </nav>
+
+
+
+    <!-- MAIN -->
     <main>
-        <section class="left__section">
-            <h1>JavaScript Playground</h1>
-            <p>JavaScript code editor with code highlighting. Project made for practice purposes, using the CodeMirror API and the html-console-log library. This project is not responsive.</p>
-
-            <div class="author__info">
-
-                <div class="author__container">
-                    <h2 class="title__author">Author:</h2>
-                    <span class="author">Adrian Rangel <small>(lainJS)</small></span>
-                </div>
-                
-
-                <div class="social__icons">
-
-                    <a href='https://github.com/laindomJS'>
-                        <i class="fa-brands fa-github fa-2x"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/lain_js/">
-                        <i class="fa-brands fa-instagram fa-2x"></i>
-                    </a>
-
-                    <a href="https://twitter.com/laindom_1">
-                        <i class="fa-brands fa-twitter fa-2x"></i>
-                    </a>
-
+        <section>
+            <div class="editor__container">
+                <textarea id="editor"></textarea>
+                <div class="buttons__container">
+                    <button class="btn__editor" onclick="run();">Run</button>
+                    <button class="btn__editor" onclick="editor.setValue('');">Clear</button>
                 </div>
             </div>
-        </section>
-
-
-        <section class="right__section">
-            <button onclick="run();">Run</button>
-            <button onclick="editor.setValue('');">Clear</button>
-
-            <textarea id="editor"></textarea>
 
             <div class="panel" id="console">
                 <ul id="output">
@@ -67,14 +60,20 @@
             </div>
         </section>
     </main>
+
+
+    <footer>
+        <h2>Made with ❤ for <a href="https://github.com/laindomJS" target="_blank" class="user">lainJS</a></h2>
+    </footer>
     
-     <!-- CODEMIRROR SCRIPTS -->
-     <script src="./codemirror/lib/codemirror.js"></script>
-     <script src="./codemirror/mode/javascript/javascript.js"></script>
-     <script src="./console-log-html.min.js"></script>
-     <script src="./evaluation.js"></script>
-     <script src="./output.js"></script>
-     <!-- CUSTOM SCRIPT -->
-     <script src="./main.js"></script>
+    <!-- CODEMIRROR SCRIPTS -->
+    <script src="./codemirror/lib/codemirror.js"></script>
+    <script src="./codemirror/mode/javascript/javascript.js"></script>
+    <script src="./console-log-html.min.js"></script>
+    <script src="./evaluation.js"></script>
+    <script src="./output.js"></script>
+    <!-- CUSTOM SCRIPT -->
+    <script src="./main.js"></script>
+    <script src="./toggle.js"></script>
 </body>
 </html>

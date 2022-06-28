@@ -4,4 +4,4 @@ var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
     lineNumbers: true,
 });
 
-editor.setSize('620', '240');
+editor.setSize('550', '240');
